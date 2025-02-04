@@ -1,0 +1,82 @@
+import java.util.Scanner;
+public class Calculator {
+    
+    public static void main(String[] args) {
+        
+       char operator; 
+        String again;
+         double num1, num2;// declared my variables
+        
+        
+    
+      
+        Scanner Check=new Scanner(System.in);
+        
+        
+     
+        Scanner Obj= new Scanner(System.in); 
+        
+        System.out.println("Hello, Welcome to Charles' calculator ");
+        
+        
+        System.out.print("Please Enter a First Number:  ");
+        
+        num1 = Obj.nextDouble(); 
+        System.out.println("enter any of the operators\n -For Addition +\n -For Subtraction -\n -For Multiplication *\n -For Division /\n -For Modulus Calculations % ");
+            System.out.print("Enter operator:  ");
+        operator=Obj.next().charAt(0); 
+        
+        System.out.print("enter a second number: ");
+        num2=Obj.nextDouble();
+        
+        double result=0;
+        
+        switch (operator){
+            case '+':
+            result =num1 + num2;
+            break;
+            
+            case '-':
+            result=num1 - num2;
+            break;
+            
+            case '*':
+            result=num1 * num2;
+            break;
+            
+            case'%':
+            if(num2 !=0){
+                result=num1%num2;
+            }
+            else{
+                System.out.println("Can't perform modulus operation by denominator of zero ");
+            }
+            break;
+            
+            case '/':
+            if(num2 !=0){
+                result=num1 /num2;
+            }
+            else{
+                System.out.println("can't perform devision by 0. please enter a non-zero denominator");
+                
+            }
+            break;
+            
+            default:
+            System.out.println("invalid operator entered");
+            return;
+        }
+        
+            //shows the result of the calc
+        System.out.println("the result for "+num1 +" " +operator+" " +num2+" " +"="+ "  "+result+ ); 
+            
+            
+    }
+    } class Calculator {
+    
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+    
+}
